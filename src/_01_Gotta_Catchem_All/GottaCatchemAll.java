@@ -27,7 +27,7 @@ class GottaCatchemAll {
      * A NullPointerException occurs when code tries to use a reference type
      * variable that is uninitialized or otherwise has a value of null.
      */
-
+//sdf
     private Robot rob;
 
     @Test
