@@ -34,7 +34,7 @@ class GottaCatchemAll {
     public void testNullPointerException() {
         try {
 
-            rob = new Robot();
+           // rob = new Robot();
 
             rob.setSpeed(100);
             rob.penDown();
@@ -52,18 +52,16 @@ class GottaCatchemAll {
     }
 
     /**
-     * An ArrayIndexOutOfBoundsException occurs when code tries to access an
-     * index within an array or other indexed data structure that does not
-     * exist.
+     *-=_
      */
 
-    @Test
+   @Test
     public void testArrayIndexOOBException() {
         int[] intArray = { 0, 1, 2, 3 };
 
         try {
 
-            for (int i = 0; i < intArray.length; i++) {
+            for (int i = 0; i < intArray.length+1; i++) {
                 System.out.println(intArray[i]);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -82,8 +80,8 @@ class GottaCatchemAll {
     public void testNumberFormatException() {
 
         try {
-            int answer = Integer.parseInt("42");
-
+            int answer = Integer.parseInt("a");
+            
             System.out.println(
                     "The answer to life, the universe and everything is... "
                             + answer);
@@ -106,13 +104,12 @@ class GottaCatchemAll {
 
         try {
 
-            Random rand = new Random();
-            int dividend = rand.nextInt(9900) + 100;
-            int divisor = rand.nextInt(5400) + 100;
+          //  Random rand = new Random();
+            int dividend = 1;
+            int divisor = 0;
             int quotient = dividend / divisor;
 
-            System.out.println("The result of " + dividend + " divided by "
-                    + divisor + " is " + quotient);
+            System.out.println(quotient);
 
         } catch (ArithmeticException e) {
 
