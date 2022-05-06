@@ -1,8 +1,9 @@
 package _03_Text_Funkifier;
 
 public class BackwardsString implements TextFunkifier {
-
-    private String unfunkifiedText, funkifiedText;
+	String unfunkifiedText = "";
+	String funkifiedText = "";
+    
     private char ch;
     public BackwardsString(String unfunkifiedText) {
 
@@ -12,7 +13,10 @@ public class BackwardsString implements TextFunkifier {
 
     @Override
     public String funkifyText() {
+  
+    	
     	for (int i = 0; i < unfunkifiedText.length(); i++) {
+    		
     		ch = unfunkifiedText.charAt(i);
     		funkifiedText = ch + funkifiedText;
 		}
