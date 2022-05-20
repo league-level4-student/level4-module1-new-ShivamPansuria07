@@ -13,7 +13,7 @@ import javax.swing.Timer;
 /*
  * 1. Create new member variables for the width and height of Polymorph then 
  * initialize them in its constructor.
- *
+ * 
  * 2. Encapsulate the member variables of the Polymorph class. 
  * 
  * 3. Substitute the hard-coded numbers in the draw method of the BluePolymorph 
@@ -61,7 +61,7 @@ public class PolymorphWindow extends JPanel implements ActionListener {
     private Timer timer;
 
     Polymorph bluePoly;
-
+    Polymorph redPoly;
     public static void main(String[] args) {
         new PolymorphWindow().buildWindow();
     }
@@ -75,7 +75,7 @@ public class PolymorphWindow extends JPanel implements ActionListener {
         window.setVisible(true);
 
         bluePoly = new BluePolymorph(50, 50,50,50);
-
+        redPoly = new RedPolymorph(0,20,50,50);
         timer = new Timer(1000 / 30, this);
         timer.start();
     }
@@ -87,6 +87,8 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 
         // draw polymorph
         bluePoly.draw(g);
+        redPoly.draw(g);
+        
     }
 
     @Override
